@@ -20,7 +20,7 @@ let UserSchema = new mongoose.Schema({
 
 UserSchema.statics.authenticate = (username, password) => new Promise((resolve, reject) => {
     const query = {$regex: new RegExp(username, "i")};
-    User.findOne({"username": query}).exec()
+    Users.findOne({"username": query}).exec()
         .then(user => {
             if (!user) {
                 let err = new Error('This user does not exist...');
@@ -35,7 +35,6 @@ UserSchema.statics.authenticate = (username, password) => new Promise((resolve, 
             reject(new Error(error));
         });
 });
-
 
 UserSchema.pre('save', async function (next) {
     let user = this;
@@ -56,6 +55,6 @@ let verifyHash = (password, original) => new Promise((resolve, reject) => {
         .catch(error => reject(error));
 });
 
-let User = mongoose.model('User', UserSchema);
+let Users = mongoose.model('User', UserSchema);
 
-module.exports = User;
+module.exports = Users;

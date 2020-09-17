@@ -7,7 +7,7 @@ const app = express();
 require('dotenv').config();
 
 /* MongoDB Connection */
-mongoose.connect(process.env.MONGO, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true });
 mongoose.set('useCreateIndex', true);
 
 /* Mongoose Logging */

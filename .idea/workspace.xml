@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44563795-2800-485a-90d8-dcec8b43f487" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +39,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/routes" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -43,12 +47,20 @@
       <recent name="$PROJECT_DIR$/routes" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.global.html">
+    <configuration name="global.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bnms-user/out/global.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bnms-user/out/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/index.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.global.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
@@ -63,7 +75,7 @@
       <updated>1600210912336</updated>
       <workItem from="1600210913500" duration="10274000" />
       <workItem from="1600283376511" duration="3000" />
-      <workItem from="1600308301085" duration="815000" />
+      <workItem from="1600308301085" duration="2650000" />
     </task>
     <servers />
   </component>
@@ -151,10 +163,10 @@
       <screen x="0" y="23" width="2560" height="1341" />
     </state>
     <state width="2539" height="465" key="GridCell.Tab.3.right/0.23.2560.1341/2560.23.2560.1417@0.23.2560.1341" timestamp="1600230132243" />
-    <state x="781" y="332" key="SettingsEditor" timestamp="1600229009988">
+    <state x="781" y="332" key="SettingsEditor" timestamp="1600310312030">
       <screen x="0" y="23" width="2560" height="1341" />
     </state>
-    <state x="781" y="332" key="SettingsEditor/0.23.2560.1341/2560.23.2560.1417@0.23.2560.1341" timestamp="1600229009988" />
+    <state x="781" y="332" key="SettingsEditor/0.23.2560.1341/2560.23.2560.1417@0.23.2560.1341" timestamp="1600310312030" />
     <state x="945" y="329" width="670" height="676" key="search.everywhere.popup" timestamp="1600219595138">
       <screen x="0" y="23" width="2560" height="1341" />
     </state>

@@ -1,4 +1,4 @@
-let Users = require('../models/user');
+let Users = require('../models/users');
 
 /**
  * Insert user into database
@@ -23,10 +23,22 @@ let getUser = (userId) => new Promise((resolve, reject) => {
 /**
  * Update user info in database
  * @param {_id} userId Unique identifier
- * @param {object} updates Allowed Keys: username, firstname, lastname, email, password
+ * @param {object} userObject Allowed Keys: username, firstname, lastname, email, password
  */
-let updateUser = (userId, updates) => new Promise((resolve, reject) => {
-
+let updateUser = (userId, userObject) => new Promise((resolve, reject) => {
+    Users.findOneAndUpdate({_id: userId}, userObject)
+        .then(user => resolve(user))
+        .catch(error => reject(new Error(error)));
 });
 
-module.exports = {createUser, getUser}
+/**
+ * Delete user from database
+ * @param {_id} userId Unique identifier
+ */
+let deleteUser = (userId) => new Promise((resolve, reject) => {
+    Users.findOneAndDelete({_id: userId})
+        .then(user => resolve(user))
+        .catch(error => reject(new Error(error)));
+});
+
+module.exports = {createUser, getUser, updateUser, deleteUser}
