@@ -1,4 +1,4 @@
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 let UserSchema = new mongoose.Schema({
@@ -21,17 +21,16 @@ let UserSchema = new mongoose.Schema({
 UserSchema.statics.authenticate = (username, password) => new Promise((resolve, reject) => {
     const query = {$regex: new RegExp(username, "i")};
     Users.findOne({"username": query}).exec()
-        .then(user => {
+        .then((user) => {
             if (!user) {
                 let err = new Error('This user does not exist...');
-                err.status = 401;
                 reject(err);
             }
             verifyHash(password, user.password)
-                .then(status => resolve(status))
+                .then(status => status ? resolve(user) : reject())
                 .catch(error => reject(new Error(error)));
         })
-        .catch(error => {
+        .catch((error) => {
             reject(new Error(error));
         });
 });
@@ -45,14 +44,14 @@ UserSchema.pre('save', async function (next) {
 
 let hashPassword = (password) => new Promise((resolve, reject) => {
     bcrypt.hash(password, 10)
-        .then(hash => resolve(hash))
-        .catch(error => reject(error));
+        .then((hash) => resolve(hash))
+        .catch((error) => reject(error));
 });
 
 let verifyHash = (password, original) => new Promise((resolve, reject) => {
     bcrypt.compare(password, original)
-        .then(status => resolve(status))
-        .catch(error => reject(error));
+        .then((status) => resolve(status))
+        .catch((error) => reject(error));
 });
 
 let Users = mongoose.model('User', UserSchema);

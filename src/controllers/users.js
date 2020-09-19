@@ -1,12 +1,7 @@
-const express = require('express');
-const controller = require('../controllers/users');
-let router = express.Router();
+let Users = require('../models/users');
 
-/**
- * Create User
- * POST /api/v1/users
- */
-router.post('/', (req, res) => {
+/* Insert user into database */
+let createUser = (req, res, next) => {
     const requiredKeys = ['username', 'firstname', 'lastname', 'email', 'password'],
         requestBody = !!req.body ? req.body : {}, requestKeys = Object.keys(requestBody);
 
@@ -16,29 +11,23 @@ router.post('/', (req, res) => {
         return res.status(400);
 
     /* Emplace user into database */
-    controller.createUser(requestBody)
-        .then(status => res.json(status))
+    Users.create(requestBody)
+        .then(user => res.json(user))
         .catch(error => res.status(409).json({
             message: 'Conflict',
             error: error
         }));
-});
+}
 
-/**
- * Get User
- * GET /api/v1/users/:id
- */
-router.get('/:id', (req, res) => {
-    controller.getUser(req.params.id)
+/* Get user from database */
+let getUser = (req, res, next) => {
+    Users.findById(req.params.id)
         .then(user => res.json(user))
         .catch(error => res.json(error));
-});
+}
 
-/**
- * Update User
- * PUT /api/v1/users/:id
- */
-router.put('/:id', (req, res) => {
+/* Update user info in database */
+let updateUser = (req, res, next) => {
     const allowedKeys = ['username', 'firstname', 'lastname', 'email', 'password'],
         requestBody = !!req.body ? req.body : {}, requestKeys = Object.keys(requestBody);
 
@@ -48,20 +37,17 @@ router.put('/:id', (req, res) => {
         return res.status(400);
 
     /* Pass clean arguments to database controller to update */
-    controller.updateUser(req.params.id, requestBody)
+    Users.findOneAndUpdate({_id: req.params.id}, req.body).exec()
         .then(user => res.json(user))
         .catch(error => res.json(error));
-});
+}
 
-/**
- * Delete User
- * DELETE /api/v1/users/:id
- */
-router.delete('/:id', (req, res) => {
-    controller.deleteUser(req.params.id)
+/* Delete user from database */
+let deleteUser = (req, res, next) => {
+    Users.findOneAndDelete({_id: req.params.id})
         .then(user => res.json(user))
         .catch(error => res.json(error));
-});
 
+}
 
-module.exports = router;
+module.exports = {createUser, getUser, updateUser, deleteUser};

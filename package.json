@@ -1,12 +1,27 @@
 {
-  "name": "bnms-user",
-  "version": "1.0.0",
+  "name": "syndicate-user",
+  "version": "1.0.2",
+  "author": "Braden Nicholson",
+  "license": "MPL-2.0",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
   "dependencies": {
+    "@types/express": "^4.17.8",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.1",
+    "@types/supertest": "^2.0.10",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsdoc": "^3.6.5",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.5"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "supertest": "^4.0.2"
   }
 }

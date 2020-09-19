@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/bnms-user.iml" filepath="$PROJECT_DIR$/.idea/bnms-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/syndicate-user.iml" filepath="$PROJECT_DIR$/.idea/syndicate-user.iml" />
     </modules>
   </component>
 </project>
