@@ -1,12 +1,14 @@
-const loader = require('./loaders');
-const config = require('./config');
+import express from 'express';
+import config from './config';
+import loaders from './loaders';
 
-function startServer() {
+async function start() {
+    const app = express();
 
-    const app = loader();
+    await loaders(app);
+
     const port = config.PORT;
     app.listen(port, () => console.log(`Syndicate::Users microservice started, listening on port ${port}.`));
-
 }
 
-startServer();
+export default start();

@@ -1,4 +1,5 @@
-/* Acquire Environment */
-require('dotenv').config();
+import dotenv from 'dotenv';
 
-module.exports = process.env;
+dotenv.config();
+
+export default process.env;

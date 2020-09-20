@@ -1,15 +1,14 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+import config from '../config';
 
-function configureMongoose(){
+export default async () => {
     /* MongoDB Connection */
-    mongoose.connect(process.env.MONGO, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true });
+    mongoose.connect(config.MONGO, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true });
     mongoose.set('useCreateIndex', true);
 
     /* Mongoose Logging */
     let db = mongoose.connection;
     db.on('error', (error) => console.log(`Connection Failed: ${error}`));
     db.once('open', () => console.log('Connected to MongoDB with no errors.'));
-}
-
-module.exports = configureMongoose;
+};
 
