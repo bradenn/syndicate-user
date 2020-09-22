@@ -1,5 +1,3 @@
-import mongoose from 'mongoose';
-
 const requiredKeys = ['username', 'firstname', 'lastname', 'email', 'password'];
 export default {
     create(req, res, next) {

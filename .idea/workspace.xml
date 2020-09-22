@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0022dfb-97d2-4512-b886-e2c6cc390fac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/utils/fillData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/projects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/projects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validators/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validators/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validators/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validators/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validators/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validators/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,20 +35,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/validators" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/services" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/validators" />
-      <recent name="$PROJECT_DIR$/src/routes" />
-      <recent name="$PROJECT_DIR$/src/services" />
-      <recent name="$PROJECT_DIR$/src/models" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/services" />
+      <recent name="$PROJECT_DIR$/src/validators" />
+      <recent name="$PROJECT_DIR$/src/routes" />
+      <recent name="$PROJECT_DIR$/src/models" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -55,7 +67,10 @@
       <workItem from="1600646779856" duration="1111000" />
       <workItem from="1600661946015" duration="722000" />
       <workItem from="1600722149909" duration="41000" />
-      <workItem from="1600736937471" duration="1961000" />
+      <workItem from="1600736937471" duration="2143000" />
+      <workItem from="1600742428932" duration="188000" />
+      <workItem from="1600742632563" duration="107000" />
+      <workItem from="1600742753495" duration="3274000" />
     </task>
     <servers />
   </component>
@@ -63,10 +78,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1004" y="494" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600565519769">
+    <state x="1004" y="494" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600745512579">
       <screen x="0" y="23" width="2560" height="1343" />
     </state>
-    <state x="1004" y="494" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1343/2560.23.2560.1417@0.23.2560.1343" timestamp="1600565519769" />
+    <state x="1004" y="494" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1343/2560.23.2560.1417@0.23.2560.1343" timestamp="1600745512579" />
+    <state x="781" y="333" key="SettingsEditor" timestamp="1600742739295">
+      <screen x="0" y="23" width="2560" height="1343" />
+    </state>
+    <state x="781" y="333" key="SettingsEditor/0.23.2560.1343/2560.23.2560.1417@0.23.2560.1343" timestamp="1600742739295" />
     <state x="994" y="390" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600646994804">
       <screen x="0" y="23" width="2560" height="1343" />
     </state>
@@ -75,5 +94,9 @@
       <screen x="0" y="23" width="2560" height="1343" />
     </state>
     <state x="945" y="327" key="run.anything.popup/0.23.2560.1343/2560.23.2560.1417@0.23.2560.1343" timestamp="1600562432514" />
+    <state x="945" y="329" width="670" height="676" key="search.everywhere.popup" timestamp="1600746315365">
+      <screen x="0" y="23" width="2560" height="1343" />
+    </state>
+    <state x="945" y="329" width="670" height="676" key="search.everywhere.popup/0.23.2560.1343/2560.23.2560.1417@0.23.2560.1343" timestamp="1600746315365" />
   </component>
 </project>

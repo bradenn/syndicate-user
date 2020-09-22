@@ -1,7 +1,7 @@
 import users from './users';
-import projects from './projects';
+import auth from './auth';
 
 export {
     users as userService,
-    projects as projectService
+    auth as authService
 }
