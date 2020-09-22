@@ -8,6 +8,7 @@ let router = Router();
 /* POST /api/v1/users */
 router.post('/', userValidator.create, async (req, res, next) => {
     const user = await userService.createUser(req.body);
+    if(!user.user) return next(new Error('User not found'));
     return res.json(user);
 });
 
